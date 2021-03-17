@@ -118,7 +118,7 @@ CGFloat kMinimumRunningAcceleration = 3.5f;
          });
      }];
     
-    if (self.useM7IfAvailable && [SOMotionDetector motionHardwareAvailable]) {
+    if ([SOMotionDetector motionHardwareAvailable]) {
         if (!self.motionActivityManager) {
             self.motionActivityManager = [[CMMotionActivityManager alloc] init];
         }
@@ -189,7 +189,7 @@ CGFloat kMinimumRunningAcceleration = 3.5f;
 #pragma mark - Private Methods
 - (void)calculateMotionType
 {
-    if (self.useM7IfAvailable && [SOMotionDetector motionHardwareAvailable]) {
+    if ([SOMotionDetector motionHardwareAvailable]) {
         return;
     }
     

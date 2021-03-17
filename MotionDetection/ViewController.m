@@ -75,10 +75,6 @@
         weakSelf.isShakingLabel.text = isShaking ? @"shaking":@"not shaking";
     };
     
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-        [SOMotionDetector sharedInstance].useM7IfAvailable = YES; //Use M7 chip if available, otherwise use lib's algorithm
-    }
-    
     //This is required for iOS > 9.0 if you want to receive location updates in the background
     [SOLocationManager sharedInstance].allowsBackgroundLocationUpdates = YES;
     
