@@ -33,6 +33,7 @@ typedef enum
 {
   MotionTypeNotMoving = 1,
   MotionTypeWalking,
+  MotionTypeCycling,
   MotionTypeRunning,
   MotionTypeAutomotive
 } SOMotionType;

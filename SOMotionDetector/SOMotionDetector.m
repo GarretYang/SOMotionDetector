@@ -130,6 +130,8 @@ CGFloat kMinimumRunningAcceleration = 3.5f;
                     _motionType = MotionTypeWalking;
                 } else if (activity.running) {
                     _motionType = MotionTypeRunning;
+                } else if (activity.cycling) {
+                    _motionType = MotionTypeCycling;
                 } else if (activity.automotive) {
                     _motionType = MotionTypeAutomotive;
                 } else if (activity.stationary || activity.unknown) {
